@@ -1,0 +1,11 @@
+name: Universal_Shop_Plugin
+main: io.github.sharkstudios.USP.Main
+version: 0.7.1
+loadbefore: [Vault]
+depend: [Vault]
+commands:
+   sklep:
+      description: Otwiera sklep
+      usage: /<command>
+      permission: usp.shop
+      permission-message: You don't have permission

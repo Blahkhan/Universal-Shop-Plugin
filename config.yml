@@ -1,0 +1,103 @@
+shopname: shop
+
+category:
+    - c1
+    - c2
+    - c3
+    - c4
+    - c5
+    - c6
+    - c7
+    - c8
+    - c9
+   
+c1:
+   count: 1 #liczba item闚 w kategori
+   name: shop1
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c2:
+   count: 1 #liczba item闚 w kategori
+   name: shop2
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c3:
+   count: 1 #liczba item闚 w kategori
+   name: shop3
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c4:
+   count: 1 #liczba item闚 w kategori
+   name: shop4
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy 
+c5:
+   count: 1 #liczba item闚 w kategori
+   name: shop5
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c6:
+   count: 1 #liczba item闚 w kategori
+   name: shop6
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy  
+c7:
+   count: 1 #liczba item闚 w kategori
+   name: shop7
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c8:
+   count: 1 #liczba item闚 w kategori
+   name: shop8
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy
+c9:
+   count: 1 #liczba item闚 w kategori
+   name: shop9
+   i1:
+      name: kij
+      id: minecraft:stick
+      price: 200
+      lore:
+         - zwyk造
+         - fainy                 
