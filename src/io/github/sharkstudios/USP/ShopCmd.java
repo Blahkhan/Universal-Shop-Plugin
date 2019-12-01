@@ -2,8 +2,10 @@ package io.github.sharkstudios.USP;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -37,11 +39,12 @@ public class ShopCmd implements CommandExecutor, Listener  {
 			Player p = (Player) sender;
 			shopInventory = Bukkit.createInventory(null, 9, main.getConfig().getString("shopname"));
 			for (String s : main.getConfig().getStringList("category")) {
+				ChatColor color = ChatColor.getByChar(Integer.toHexString(new Random().nextInt(16)));
 				MinecraftKey mk = new MinecraftKey(main.getConfig().getString(s+".i1.id"));
 				ItemStack it = CraftItemStack.asNewCraftStack(Item.REGISTRY.get(mk));
 				ItemMeta itMeta = it.getItemMeta();
 				int suff = index + 1;
-				itMeta.setDisplayName(main.getConfig().getString(s+".name") + "/" + suff);
+				itMeta.setDisplayName(color + main.getConfig().getString(s+".name") + "/" + suff);
 				it.setItemMeta(itMeta);
 				shopInventory.setItem(index, it);
 				index++;
@@ -69,19 +72,20 @@ public class ShopCmd implements CommandExecutor, Listener  {
 			Inventory cat = Bukkit.createInventory(null, 9 * 6, main.getConfig().getString(category + ".name" ));
 			ItemStack back = new ItemStack(Material.BARRIER);
 			ItemMeta backMeta = back.getItemMeta();
-			backMeta.setDisplayName("Powrót");
+			backMeta.setDisplayName(ChatColor.UNDERLINE + "" + ChatColor.RED + "Powrót");
 			back.setItemMeta(backMeta);
 			cat.setItem(0, back);
 			for(int i = 1; i <= main.getConfig().getInt(category + ".count"); i++){
+				ChatColor color = ChatColor.getByChar(Integer.toHexString(new Random().nextInt(16)));
 				MinecraftKey mk = new MinecraftKey(main.getConfig().getString(category+".i" + i + ".id"));
 				ItemStack it = CraftItemStack.asNewCraftStack(Item.REGISTRY.get(mk));
 				ItemMeta mt = it.getItemMeta();
-				mt.setDisplayName(main.getConfig().getString(category+".i" + i + ".name"));
+				mt.setDisplayName(color + main.getConfig().getString(category+".i" + i + ".name"));
 				List<String> lore = new ArrayList<String>();
-				lore.add(main.getConfig().getString(category+".i" + i + ".price"));
+				lore.add(main.getConfig().getString(category +".i" + i + ".price"));
 				List<String> cLore = main.getConfig().getStringList(category+".i" + i + ".lore");
-				lore.add(cLore.get(0));
-				lore.add(cLore.get(1));
+				lore.add(color + cLore.get(0));
+				lore.add(color + cLore.get(1));
 				mt.setLore(lore);
 				it.setItemMeta(mt);
 				cat.setItem(i, it);
@@ -89,16 +93,17 @@ public class ShopCmd implements CommandExecutor, Listener  {
 			player.closeInventory();
 			player.openInventory(cat);
 		}else {
-			if (clicked.hasItemMeta() && clicked.getItemMeta().getDisplayName().equals("Powrót")) {
+			if (clicked.hasItemMeta() && clicked.getItemMeta().getDisplayName().equals(ChatColor.UNDERLINE + "" + ChatColor.RED + "Powrót")) {
 				e.setCancelled(true);
 				int index = 0;
 				shopInventory = Bukkit.createInventory(null, 9, main.getConfig().getString("shopname"));
 				for (String s : main.getConfig().getStringList("category")) {
+					ChatColor color = ChatColor.getByChar(Integer.toHexString(new Random().nextInt(16)));
 					MinecraftKey mk = new MinecraftKey(main.getConfig().getString(s+".i1.id"));
 					ItemStack it = CraftItemStack.asNewCraftStack(Item.REGISTRY.get(mk));
 					ItemMeta itMeta = it.getItemMeta();
 					int suff = index + 1;
-					itMeta.setDisplayName(main.getConfig().getString(s+".name") + "/" + suff);
+					itMeta.setDisplayName(color + main.getConfig().getString(s+".name") + "/" + suff);
 					it.setItemMeta(itMeta);
 					shopInventory.setItem(index, it);
 					index++;

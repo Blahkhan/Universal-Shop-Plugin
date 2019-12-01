@@ -1,6 +1,6 @@
 name: Universal_Shop_Plugin
 main: io.github.sharkstudios.USP.Main
-version: 0.7.1
+version: 1.0.4
 loadbefore: [Vault]
 depend: [Vault]
 commands:

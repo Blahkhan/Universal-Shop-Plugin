@@ -6,7 +6,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/dogie/Documents/api/spigot-1.12.2.jar"/>
-	<classpathentry kind="lib" path="C:/Users/dogie/Documents/api/Vault.jar"/>
+	<classpathentry kind="lib" path="C:/Users/dogie/Documents/Java API/spigot-1.12.2(1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/dogie/Documents/Java API/Vault.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
